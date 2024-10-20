@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button } from "@headlessui/react";
+import ProductCard from "./components/ProductCard";
+import Model from "./components/UI/Model";
+import {productList} from "./data"
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className='text-3xl font-bold underline'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => {
+ /*------------State------------*/
+  const [isOpen, setIsOpen] = useState(false)
 
-export default App
+
+   /*------------Handler------------*/
+  function open() {
+    setIsOpen(true)
+  }
+
+  function close() {
+    setIsOpen(false)
+  }
+
+
+  /*------------Renders------------*/
+  const renderProductList = productList.map(product => <ProductCard key={product.id} product={product} />)
+
+    return (
+        <main className="container">
+          <Button className="bg-indigo-700 hover:bg-indigo-800 w-full p-3" onClick={open}>Add</Button>
+          <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4 p-2 rounded-md">
+            {renderProductList}
+          </div>
+          <Model isOpen={isOpen} close={close} title="Add A New Product">
+            <div className="flex items-center space-x-3">
+              <Button className="bg-indigo-700 hover:bg-indigo-800 w-full">Submit</Button>
+              <Button className="bg-gray-300 hover:bg-gray-400 w-full">Cancel</Button>
+            </div>
+          </Model>
+        </main>
+    )
+};
+
+export default App;
