@@ -1,10 +1,10 @@
-export interface IProduct {
+export interface IProduct{
     id?: string | undefined;
     title: string;
     descreption: string;
     imageURL: string;
     price: string;
-    color: string[];
+    colors: string[];
     category:{
         name:string,
         imageURL:string

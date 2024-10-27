@@ -1,10 +1,9 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface Iprops {
+interface Iprops extends ButtonHTMLAttributes<HTMLButtonElement>{
     children : ReactNode;
     className?: string;
     width?: "w-full" | "w-fit";
-    onClick?: () => void;
 }
 
 const Button = ({children, className, width = "w-fit", ...rest} : Iprops) => {
