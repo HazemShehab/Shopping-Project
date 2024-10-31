@@ -1,65 +1,70 @@
 import {v4 as uuid} from "uuid";
-import {IFormInput, IProduct} from "../interfaces";
+import {ICategory, IFormInput, IProduct} from "../interfaces";
 
 export const productList: IProduct[] = [
     {
         id: uuid(),
-        title: "Iphone 7 2022",
+        title: "Iphone 16 Pro Max",
         descreption: "The pocket-sized phone is powered by the Apple A10 Fusion chip, a 4-core processor, and 2GB of RAM. You can choose whether to opt for 32GB, 128GB, or 256GB of internal storage",
-        imageURL:"/images/image_1.jpg",
-        price: "$100",
-        colors: ["#d33554", "#160307", "#e9dddd"],
+        imageURL:"https://m.media-amazon.com/images/I/61bMJdgeryL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        price: "1699",
+        colors: ["#bbab5e", "#e9dddd", "#000000"],
         category: {
-            name: "Smart Phons",
-            imageURL:"/images/image_1.jpg"
+            name: "Iphone",
+            imageURL:"https://images.pexels.com/photos/26550485/pexels-photo-26550485/free-photo-of-close-up-of-an-iphone-7.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            categoryName: "Iphone"
         }
     },
     {
         id: uuid(),
         title: "Nike Shoes",
         descreption: "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning",
-        imageURL:"/images/image_2.jpg",
-        price: "$15",
-        colors: ["#29991b", "#91d588", "#b9d1b6"],
+        imageURL:"https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        price: "79",
+        colors: ["#d71818", "#664b54", "#dfcfcf", "#28d7cf", "#000000"],
         category: {
             name: "shoes",
-            imageURL:"/images/image_2.jpg",
+            imageURL:"https://m.media-amazon.com/images/I/51Wdzl8lU9L._AC_SY695_.jpg",
+            categoryName: "Shoes"
         }
     },
     {
         id: uuid(),
-        title: "Nike shoes",
-        descreption: "Sport Nike shoes. Today we use Nike Air in a variety of performance shoes (like running and basketball)",
-        imageURL:"/images/image_3.jpg",
-        price: "$9",
-        colors: ["#3daab5", "#abb6b7", "#407075"],
+        title: "Addidas shoes",
+        descreption: "Sport Addidas shoes. Today we use Nike Air in a variety of performance shoes (like running and basketball)",
+        imageURL:"https://images.pexels.com/photos/684152/pexels-photo-684152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        price: "85",
+        colors: ["#3daab5", "#abb6b7", "#000000"],
         category: {
             name: "shoes",
-            imageURL:"/images/image_3.jpg"
+            imageURL:"https://m.media-amazon.com/images/I/51Wdzl8lU9L._AC_SY695_.jpg",
+            categoryName: "Shoes"
         }
     },
     {
         id: uuid(),
-        title: "Samsung Galaxy phone",
+        title: "Samsung Galaxy S24",
         descreption: "Samsung Galaxy devices are made up of highly innovative Android smartphones and tablets that are created and developed with you in mind",
-        imageURL:"/images/image_4.jpg",
-        price: "$90",
-        colors: ["#362d51", "#8b7abf", "#5226d7"],
+        imageURL:"https://m.media-amazon.com/images/I/61B9dpnaBDL._AC_SX679_.jpg",
+        price: "1379",
+        colors: ["#362d51", "#8b7abf", "#5226d7", "#000000"],
         category: {
-            name: "Smart Phons",
-            imageURL:"/images/image_4.jpg"
+            name: "Samsung",
+            imageURL:"/images/image_4.jpg",
+            categoryName: "Samsung"
         }
     },
     {
         id: uuid(),
-        title: "Labtob Mac",
-        descreption: "8-core CPU with 4 performance cores and 4 efficiency cores, Hardware-accelerated H.264, HEVC, ProRes, and ProRes RAW",
-        imageURL:"/images/image_5.jpg",
-        price: "$120",
-        colors: ["#cd8db6", "#6b0547", "#d3108e"],
+        title: "Samsung",
+        descreption: "Samsung 27 inch odyssey g5 gaming monitor with 1000r curved screen, 144hz, 1ms, freesync premium, qhd (lc27g55tqwmxzn), black",
+        imageURL:"https://m.media-amazon.com/images/I/71l3vEp4Z2S._AC_SX522_.jpg",
+        price: "120",
+        colors: ["#dddddd", "#3C2A21", "#000000"],
         category: {
-            name: "Labtob Mac",
-            imageURL:"/images/image_5.jpg"
+            name: "Desktop",
+            imageURL:"https://images-cdn.ubuy.co.in/65f1abea6f15032e663e11fe-dell-optiplex-7040-desktop-computer-pc.jpg",
+            categoryName: "Desktop"
         }
     },
     {
@@ -67,23 +72,25 @@ export const productList: IProduct[] = [
         title: "Labtob Samsung",
         descreption: "Laptops within the Galaxy Book3 series feature 13th Gen Intel® Core™ processors, lightweight design features and incredibly immersive displays. They are optimised for creating, multitasking and gaming. Released in February 2023",
         imageURL:"/images/image_6.jpg",
-        price: "$110.00",
+        price: "110",
         colors: ["#d78f8f", "#dd0d0d", "#4d1818"],
         category: {
-            name: "Labtob Samsung",
-            imageURL:"/images/image_6.jpg"
+            name: "Desktop",
+            imageURL:"https://images-cdn.ubuy.co.in/65f1abea6f15032e663e11fe-dell-optiplex-7040-desktop-computer-pc.jpg",
+            categoryName: "Desktop"
         }
     },
     {
         id: uuid(),
         title: "Apple Watch",
         descreption: "44mm or 40mm aluminum case, Retina display up to 1000 nits, High and low heart rate notifications Irregular rhythm notifications2 Low cardio fitness notifications",
-        imageURL:"/images/image_7.jpg",
-        price: "$100.00",
-        colors: ["#FF0032", "#2563EB", "#FF6E31"],
+        imageURL:"https://m.media-amazon.com/images/I/71mFHvSCpBL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        price: "100",
+        colors: ["#bbab5e", "#000000"],
         category: {
-            name: "Apple Watch",
-            imageURL:"/images/image_7.jpg"
+            name: "Smart Watch",
+            imageURL:"https://images.pexels.com/photos/296951/pexels-photo-296951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            categoryName: "Smart Watch"
         }
     },
 ];
@@ -130,4 +137,43 @@ export const colors: string[] = [
     "#1F8A70",
     "#820000",
     "#FF0032",
+]
+
+export const categories: ICategory[] = [
+  {
+    id: uuid(),
+    name: "Iphone",
+    imageURL: "https://images.pexels.com/photos/26550485/pexels-photo-26550485/free-photo-of-close-up-of-an-iphone-7.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    categoryName: "Iphone"
+  },
+  {
+    id: uuid(),
+    name: "Samsung",
+    imageURL: "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    categoryName: "Samsung"
+  },
+  {
+    id: uuid(),
+    name: "Shoes",
+    imageURL: "https://m.media-amazon.com/images/I/51Wdzl8lU9L._AC_SY695_.jpg",
+    categoryName: "Shoes"
+  },
+  {
+    id: uuid(),
+    name: "Clothes",
+    imageURL: "https://m.media-amazon.com/images/I/61IrEgdqMZL._AC_SY500_.jpg",
+    categoryName: "Clothes"
+  },
+  {
+    id: uuid(),
+    name: "Desktop",
+    imageURL: "https://images-cdn.ubuy.co.in/65f1abea6f15032e663e11fe-dell-optiplex-7040-desktop-computer-pc.jpg",
+    categoryName: "Desktop"
+  },
+  {
+    id: uuid(),
+    name: "Smart Watch",
+    imageURL: "https://images.pexels.com/photos/296951/pexels-photo-296951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    categoryName: "Smart Watch"
+  },
 ]

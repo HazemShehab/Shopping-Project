@@ -1,19 +1,29 @@
+import { ProductNameTypes } from "../types"
+
 export interface IProduct{
-    id?: string | undefined;
-    title: string;
-    descreption: string;
-    imageURL: string;
-    price: string;
-    colors: string[];
+    id?: string,
+    title: string,
+    descreption: string,
+    imageURL: string,
+    price: string,
+    colors: string[],
     category:{
         name:string,
-        imageURL:string
+        imageURL:string,
+        categoryName:string
     }
 }
 
 export interface IFormInput {
     id: string,
-    name: "title" | "descreption" | "imageURL" | "price";
+    name: ProductNameTypes
     label: string,
     type: string
+}
+
+export interface ICategory {
+    id: string,
+    name: string,
+    imageURL: string,
+    categoryName: string
 }
