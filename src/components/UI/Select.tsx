@@ -14,7 +14,7 @@ const Select = ({selected, setSelected}: Iprops) => {
 
   return (
     <Listbox value={selected} onChange={setSelected}>
-      <Label className="block text-sm font-medium text-gray-700">Category</Label>
+      <Label className="block text-sm font-medium text-white">Category</Label>
       <div className="relative">
         <ListboxButton className="relative w-full cursor-default rounded-md bg-white py-3 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
           <span className="flex items-center">

@@ -7,7 +7,7 @@ interface IProps {
     close: () => void;
     title?: string;
     children: ReactNode;
-    description?: string
+    description?: string,
 }
 
 const Model = ({isOpen, close, title, children, description} : IProps) => {
@@ -21,12 +21,12 @@ const Model = ({isOpen, close, title, children, description} : IProps) => {
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-lg bg-white p-6 backdrop-blur-none duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md rounded-lg bg-white/50 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               
-              {title && <DialogTitle as="h3" className="text-base/7 font-medium text-black">
+              {title && <DialogTitle as="h3" className="text-base/7 font-medium text-white">
                 <h3>{title}</h3>
-                <p className='mt-2 text-gray-600 text-sm'>{description}</p>
+                <p className='mt-2 text-white text-sm'>{description}</p>
               </DialogTitle>}
             
               <div className="mt-4">
