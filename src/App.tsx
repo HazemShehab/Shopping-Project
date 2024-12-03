@@ -52,19 +52,24 @@ const App = () => {
   const closeEditModal = () => setIsOpenEditModal(false);
   const openConfirmModal = useCallback (() => setIsConfirmModal(true), []);
   const closeConfirmModal = () => setIsConfirmModal(false);
-  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-  const {value, name} = event.target;
 
-  setProduct ({
-    ...product,
-    [name]: value
-  })
+  const onChangeHandler = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    const {value, name} = event.target;
+  
+    // using this syntax better to make a memoize version
+    setProduct (prev => ({...prev, [name]: value}))
+    // setProduct ({
+    //   ...product,
+    //   [name]: value
+    // })
 
-  setErrors({
-    ...errors,
-    [name]: ""
-  })
- };
+    setErrors (prev => ({...prev, [name]: ""}))
+    // setErrors ({
+    //   ...errors,
+    //   [name]: ""
+    // })
+  
+   }, []);
 
  const onChangeEditHandler = (event: ChangeEvent<HTMLInputElement>) => {
   const {value, name} = event.target;

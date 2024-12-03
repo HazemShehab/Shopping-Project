@@ -1,5 +1,5 @@
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 
 
 interface IProps {
@@ -40,4 +40,4 @@ const Model = ({isOpen, close, title, children, description} : IProps) => {
   )
 }
 
-export default Model;
+export default memo(Model);

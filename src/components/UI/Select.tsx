@@ -4,6 +4,7 @@ import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@h
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { categories } from '../../data'
 import { ICategory } from '../../interfaces'
+import { memo } from 'react'
 
 interface Iprops {
   selected: {name:string, imageURL:string},
@@ -54,4 +55,4 @@ const Select = ({selected, setSelected}: Iprops) => {
   )
 }
 
-export default Select;
+export default memo(Select);
